@@ -11,7 +11,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.CheckBox?>
 <HBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" >
-    <ListView fx:id="employeeListView"/>
+
+    <VBox>
+        <ListView fx:id="employeeListView"/>
+        <VBox>
+            <Button fx:id="deleteButton" text="Delete Selected"/>
+        </VBox>
+    </VBox>
     <VBox>
         <HBox>
             <Label text="First Name: " prefWidth="100"/>
@@ -33,6 +39,15 @@
             <TextField prefWidth="150" fx:id="miscText"/>
 
         </HBox>
+        <HBox>
+            <Button fx:id="clearButton" text="Clear Fields"/>
+            <Button fx:id="addButton" text="Add New"/>
+        </HBox>
+        <HBox>
+            <Button fx:id="fireButton" text="Deactivate Employee"/>
+            <Button fx:id="hireButton" text="Activate Employee"/>
+        </HBox>
     </VBox>
+
 
 </HBox>
