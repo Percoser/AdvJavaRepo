@@ -2,7 +2,6 @@ package sample;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,12 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import org.w3c.dom.Text;
-
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.UUID;
 
 public class Controller implements Initializable {
 
@@ -65,6 +61,19 @@ public class Controller implements Initializable {
                             if(selectedID!= -1){
                                 items.remove(selectedItem);
                                 employeeListView.getSelectionModel().selectFirst();
+                            }
+                        }
+                    });
+
+                    isActiveCheckBox.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            if (((Employee) selectedItem).isActive == false){
+                                selectedItem.hire();
+                                isActiveCheckBox.setSelected(((Employee) selectedItem).isActive);
+                            }else if(((Employee) selectedItem).isActive == true){
+                                selectedItem.fire();
+                                isActiveCheckBox.setSelected(((Employee) selectedItem).isActive);
                             }
                         }
                     });

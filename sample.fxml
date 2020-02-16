@@ -10,6 +10,7 @@
 
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.CheckBox?>
+<?import com.jfoenix.controls.JFXChipView?>
 <HBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center" >
 
     <VBox>
