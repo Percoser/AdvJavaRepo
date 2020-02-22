@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+   <JFXButton></JFXButton>
+       <VBox>
+      <children>
+              <ListView fx:id="employeeListView" />
+              <VBox>
+                 <children>
+                     <Button fx:id="deleteButton" text="Delete Selected" />
+                 </children>
+              </VBox>
+      </children>
+       </VBox>
+       <VBox>
+          <children>
+              <HBox>
+                 <children>
+                     <Label prefWidth="100" text="First Name: " />
+                     <TextField fx:id="fNameText" prefWidth="150" />
+                 </children>
+      
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label prefWidth="100" text="Last Name: " />
+                     <TextField fx:id="lNameText" prefWidth="150" />
+                 </children>
+      
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label prefWidth="100" text="Is Active: " />
+                     <CheckBox fx:id="isActiveCheckBox" />
+                 </children>
+      
+              </HBox>
+              <HBox>
+                 <children>
+                     <Label prefWidth="100" text="Misc. : " />
+                     <TextField fx:id="miscText" prefWidth="150" />
+                 </children>
+      
+              </HBox>
+              <HBox>
+                 <children>
+                     <Button fx:id="clearButton" text="Clear Fields" />
+                     <Button fx:id="addButton" text="Add New" />
+                 </children>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Button fx:id="fireButton" text="Deactivate Employee" />
+                     <Button fx:id="hireButton" text="Activate Employee" />
+                 </children>
+              </HBox>
+              <HBox>
+                 <children>
+                     <Button fx:id="createTableButton" text="Create Table" />
+                 </children>
+              </HBox>
+          </children>
+       </VBox>
+   </children>
+
+
+</HBox>
